@@ -1,0 +1,255 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DF2931D4158806300098D351 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF2931D3158806300098D351 /* Foundation.framework */; };
+		DF2931D7158806300098D351 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2931D6158806300098D351 /* main.m */; };
+		DF2931DB158806300098D351 /* BTSerialDemo.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF2931DA158806300098D351 /* BTSerialDemo.1 */; };
+		DF2931E31588065C0098D351 /* BTSerialConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2931E21588065C0098D351 /* BTSerialConnection.m */; };
+		DF2931E7158806830098D351 /* BTSerialDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2931E6158806830098D351 /* BTSerialDemo.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DF2931CD158806300098D351 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				DF2931DB158806300098D351 /* BTSerialDemo.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		DF2931CF158806300098D351 /* BTSerialDemo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BTSerialDemo; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF2931D3158806300098D351 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DF2931D6158806300098D351 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DF2931D9158806300098D351 /* BTSerialDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BTSerialDemo-Prefix.pch"; sourceTree = "<group>"; };
+		DF2931DA158806300098D351 /* BTSerialDemo.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = BTSerialDemo.1; sourceTree = "<group>"; };
+		DF2931E11588065C0098D351 /* BTSerialConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BTSerialConnection.h; path = ../BTSerialConnection.h; sourceTree = "<group>"; };
+		DF2931E21588065C0098D351 /* BTSerialConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BTSerialConnection.m; path = ../BTSerialConnection.m; sourceTree = "<group>"; };
+		DF2931E5158806830098D351 /* BTSerialDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTSerialDemo.h; sourceTree = "<group>"; };
+		DF2931E6158806830098D351 /* BTSerialDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTSerialDemo.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DF2931CC158806300098D351 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF2931D4158806300098D351 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DF2931C4158806300098D351 = {
+			isa = PBXGroup;
+			children = (
+				DF2931E41588066F0098D351 /* BTSerialConnection */,
+				DF2931D5158806300098D351 /* BTSerialDemo */,
+				DF2931D2158806300098D351 /* Frameworks */,
+				DF2931D0158806300098D351 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DF2931D0158806300098D351 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DF2931CF158806300098D351 /* BTSerialDemo */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DF2931D2158806300098D351 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DF2931D3158806300098D351 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DF2931D5158806300098D351 /* BTSerialDemo */ = {
+			isa = PBXGroup;
+			children = (
+				DF2931E5158806830098D351 /* BTSerialDemo.h */,
+				DF2931E6158806830098D351 /* BTSerialDemo.m */,
+				DF2931D6158806300098D351 /* main.m */,
+				DF2931DA158806300098D351 /* BTSerialDemo.1 */,
+				DF2931D8158806300098D351 /* Supporting Files */,
+			);
+			path = BTSerialDemo;
+			sourceTree = "<group>";
+		};
+		DF2931D8158806300098D351 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DF2931D9158806300098D351 /* BTSerialDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DF2931E41588066F0098D351 /* BTSerialConnection */ = {
+			isa = PBXGroup;
+			children = (
+				DF2931E11588065C0098D351 /* BTSerialConnection.h */,
+				DF2931E21588065C0098D351 /* BTSerialConnection.m */,
+			);
+			name = BTSerialConnection;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DF2931CE158806300098D351 /* BTSerialDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF2931DE158806300098D351 /* Build configuration list for PBXNativeTarget "BTSerialDemo" */;
+			buildPhases = (
+				DF2931CB158806300098D351 /* Sources */,
+				DF2931CC158806300098D351 /* Frameworks */,
+				DF2931CD158806300098D351 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BTSerialDemo;
+			productName = BTSerialDemo;
+			productReference = DF2931CF158806300098D351 /* BTSerialDemo */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DF2931C6158806300098D351 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Bluetoo Ventures";
+			};
+			buildConfigurationList = DF2931C9158806300098D351 /* Build configuration list for PBXProject "BTSerialDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DF2931C4158806300098D351;
+			productRefGroup = DF2931D0158806300098D351 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DF2931CE158806300098D351 /* BTSerialDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DF2931CB158806300098D351 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF2931D7158806300098D351 /* main.m in Sources */,
+				DF2931E31588065C0098D351 /* BTSerialConnection.m in Sources */,
+				DF2931E7158806830098D351 /* BTSerialDemo.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		DF2931DC158806300098D351 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		DF2931DD158806300098D351 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		DF2931DF158806300098D351 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BTSerialDemo/BTSerialDemo-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DF2931E0158806300098D351 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BTSerialDemo/BTSerialDemo-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DF2931C9158806300098D351 /* Build configuration list for PBXProject "BTSerialDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF2931DC158806300098D351 /* Debug */,
+				DF2931DD158806300098D351 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF2931DE158806300098D351 /* Build configuration list for PBXNativeTarget "BTSerialDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF2931DF158806300098D351 /* Debug */,
+				DF2931E0158806300098D351 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DF2931C6158806300098D351 /* Project object */;
+}
