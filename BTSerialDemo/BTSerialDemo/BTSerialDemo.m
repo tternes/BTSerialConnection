@@ -17,8 +17,8 @@
     [serial setDelegate:self];
     
     // Set the connection details
-    [serial setPort:@"/dev/tty.PL2303-000012FA"];
-    [serial setBaud:9600];
+    [serial setPort:@"/dev/tty.usbserial-A800eGgE"];
+    [serial setBaud:57600];
 
     // Messages from the connected device end in newline
     [serial setMessageTerminator:@"\n"];
@@ -27,7 +27,7 @@
     [serial openConnection];
     
     // Close the connection after 10 seconds (though the runloop will continue indefinitely)
-    [self performSelector:@selector(stopDemo) withObject:nil afterDelay:10.0];
+    //[self performSelector:@selector(stopDemo) withObject:nil afterDelay:10.0];
 }
 
 - (void)stopDemo
@@ -46,6 +46,11 @@
 - (void)connectionClosed:(BTSerialConnection *)connection
 {
     NSLog(@"Connection Closed: %@", [connection port]);    
+}
+
+- (void)connection:(BTSerialConnection *)connection didReceiveMessage:(NSString *)message
+{
+    NSLog(@"rx: %@", message);
 }
 
 - (void)connection:(BTSerialConnection *)connection didReceiveTerminatedMessage:(NSString *)message

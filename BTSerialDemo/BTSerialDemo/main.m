@@ -11,18 +11,17 @@
 
 int main(int argc, const char * argv[])
 {
-
-    @autoreleasepool {
-        
-        BTSerialDemo *demo = [[BTSerialDemo alloc] init];
-        [demo startDemo];
-        
-        CFRunLoopRun();
-        
-        [demo release];
-        demo = nil;
-        
-    }
+    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+    
+    BTSerialDemo *demo = [[BTSerialDemo alloc] init];
+    [demo startDemo];
+    
+    CFRunLoopRun();
+    
+    [demo release];
+    demo = nil;
+    
+    [pool release];
     return 0;
 }
 

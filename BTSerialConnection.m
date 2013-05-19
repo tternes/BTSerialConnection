@@ -68,6 +68,10 @@
             rate = B115200;
             break;
             
+        case 57600:
+            rate = B57600;
+            break;
+            
         case 9600:
         default:
             rate = B9600;
@@ -97,6 +101,7 @@
     [_fdHandle seekToEndOfFile];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceiveData:) name:NSFileHandleReadCompletionNotification object:_fdHandle];
+
     [_fdHandle readInBackgroundAndNotify];
     
     return YES;
@@ -128,8 +133,17 @@ error:
 {
     if([_fdHandle fileDescriptor])
     {
-        [_fdHandle writeData:data];
-        return YES;
+        @try
+        {
+            [_fdHandle writeData:data];
+            return YES;
+        }
+        @catch (NSException *ex)
+        {
+            NSLog(@"Exception, closing connection; caught while writing data: %@", ex);
+            [self closeConnection];
+            return NO;
+        }
     }
 
     return NO;
@@ -154,7 +168,10 @@ error:
     NSData* messageData = [[notification userInfo] objectForKey:NSFileHandleNotificationDataItem];
     if (messageData == nil || [messageData length] == 0 ) 
     {
-        [_fdHandle performSelector:@selector(readInBackgroundAndNotify) withObject:nil afterDelay:0.1];
+        // TODO: happens when the connection is removed (usb unplugged).
+        // Need to determine if this is legitimate action, instead of reattempting
+        // [_fdHandle performSelector:@selector(readInBackgroundAndNotify) withObject:nil afterDelay:0.1];
+        [self closeConnection];
         return;
     }
 

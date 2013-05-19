@@ -66,6 +66,11 @@
 {
     NSFileHandle *_fdHandle;
     NSMutableData *_collectedData;
+    
+    id delegate;
+    NSInteger baud;
+    NSString *messageTerminator;
+    NSString *port;
 }
 
 /**
