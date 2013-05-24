@@ -72,6 +72,14 @@
             rate = B57600;
             break;
             
+        case 38400:
+            rate = B38400;
+            break;
+            
+        case 19200:
+            rate = B19200;
+            break;
+            
         case 9600:
         default:
             rate = B9600;
