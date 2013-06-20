@@ -119,6 +119,16 @@ error:
     return NO;
 }
 
+- (void)dealloc
+{
+    [self closeConnection];
+    
+    self.port = nil;
+    self.messageTerminator = nil;
+    [_collectedData release], _collectedData = nil;
+    [super dealloc];
+}
+
 - (BOOL)closeConnection
 {
     if(_fdHandle)

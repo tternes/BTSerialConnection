@@ -94,7 +94,7 @@
  */
 - (BOOL)writeMessage:(NSString *)message;
 
-@property (nonatomic, retain) id<BTSerialConnectionDelegate> delegate;
+@property (nonatomic, assign) id<BTSerialConnectionDelegate> delegate;
 @property (nonatomic, retain) NSString *port;
 @property (nonatomic, assign) NSInteger baud;
 @property (nonatomic, copy) NSString *messageTerminator;
