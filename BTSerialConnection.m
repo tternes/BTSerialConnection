@@ -207,10 +207,16 @@ error:
         [_collectedData appendData:messageData];
 
         NSString *message = [[[NSString alloc] initWithData:_collectedData encoding:NSASCIIStringEncoding] autorelease];
-        if(message && [message rangeOfString:self.messageTerminator].location != NSNotFound)
+        
+        NSRange terminatorRange = [message rangeOfString:self.messageTerminator];
+        if(message && terminatorRange.location != NSNotFound)
         {
-            [delegate performSelector:@selector(connection:didReceiveTerminatedMessage:) withObject:self withObject:message];
-            [_collectedData setData:nil];
+            // Send the range of valid data
+            NSString *subMessage = [message substringWithRange:terminatorRange];
+            [delegate performSelector:@selector(connection:didReceiveTerminatedMessage:) withObject:self withObject:subMessage];
+            
+            // remove everything up to (and including) the terminator
+            [_collectedData replaceBytesInRange:terminatorRange withBytes:NULL length:terminatorRange.length];
         }
     }
 
